@@ -3,19 +3,22 @@ import 'antd/dist/antd.css';
 import {
     Layout, Menu, Breadcrumb, Icon,
 } from 'antd';
+import menu from "../data/menu"
 
 const {
     Header, Content, Footer, Sider,
 } = Layout;
 const SubMenu = Menu.SubMenu;
-
 export default  class Mian extends React.Component {
+    constructor(props) {
+        super(props)
+    }
     state = {
         collapsed: false,
+
     };
 
     onCollapse = (collapsed) => {
-        console.log(collapsed);
         this.setState({collapsed});
     }
 
@@ -45,17 +48,6 @@ export default  class Mian extends React.Component {
                             <Menu.Item key="4">Bill</Menu.Item>
                             <Menu.Item key="5">Alex</Menu.Item>
                         </SubMenu>
-                        <SubMenu
-                            key="sub2"
-                            title={<span><Icon type="team"/><span>Team</span></span>}
-                        >
-                            <Menu.Item key="6">Team 1</Menu.Item>
-                            <Menu.Item key="8">Team 2</Menu.Item>
-                        </SubMenu>
-                        <Menu.Item key="9">
-                            <Icon type="file"/>
-                            <span>File</span>
-                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>
