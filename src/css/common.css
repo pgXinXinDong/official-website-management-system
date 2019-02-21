@@ -1,0 +1,41 @@
+/*字体大小*/
+.fs30{
+    font-size:30px;
+}
+/*字体颜色*/
+.col1{
+    color:#ffffff;
+}
+
+/*行高*/
+.l-height{
+    height:100%
+}
+
+/*背景颜色*/
+.bgc1{
+    background-color:#001529;
+}
+
+.t-align-c{
+    text-align: center;
+}
+
+.t-align-l{
+    text-align:left;
+}
+
+/*padding*/
+.pd1{
+    padding-left:20px;
+}
+
+
+/*其他样式*/
+.link{
+    color:rgba(255, 255, 255, 0.65)
+}
+.link:hover{
+    color:rgba(255, 255, 255,1);
+    text-decoration:none;
+}

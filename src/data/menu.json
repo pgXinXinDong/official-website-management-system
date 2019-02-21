@@ -1,10 +1,49 @@
 {
   "menu": [
     {
-      "title": "管理平台"
+      "title": "工作台",
+      "key":"menu1",
+      "icon":"laptop",
+      "link":"/workbench"
     },
     {
-      "title": "管理平台"
+      "title": "管理平台",
+      "icon":"home",
+      "key":"menu2",
+      "link":"/manage",
+      "subMenu":[
+        {"title":"公告管理","link":"/notice"},
+        {"title":"动态管理","link":"/dynamic"},
+        {"title":"站点管理","link":"/station:;"}
+      ]
+    },
+    {
+      "title": "案例管理",
+      "icon":"audit",
+      "key":"menu3",
+      "subMenu":[
+        {"title":"banner图","link":"javascript:;"},
+        {"title":"商家案例","link":"javascript:;"},
+        {"title":"标签管理","link":"javascript:;"},
+        {"title":"类目管理","link":"javascript:;"}
+      ]
+    },
+    {
+      "title": "应用中心",
+      "icon":"ant-design",
+      "key":"menu4",
+      "subMenu":[
+        {"title":"首页管理","link":"javascript:;"},
+        {"title":"应用页管理","link":"javascript:;"}
+      ]
+    },
+    {
+      "title": "系统管理",
+      "icon":"setting",
+      "key":"menu5",
+      "subMenu":[
+        {"title":"账号管理","link":"javascript:;"}
+      ]
     }
   ]
 }
