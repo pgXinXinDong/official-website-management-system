@@ -24,6 +24,9 @@ export default  class Mian extends React.Component {
     onCollapse = (collapsed) => {
         this.setState({collapsed});
     }
+    onClick = ({ item, key, selectedKeys }) =>{
+        console.log(1111,item,key,selectedKeys)
+    }
 
     render() {
         return (
@@ -42,7 +45,12 @@ export default  class Mian extends React.Component {
                         onCollapse={this.onCollapse}
                     >
                         <div className="logo"/>
-                        <Menu theme="dark" defaultSelectedKeys={['menu1']} mode="inline">
+                        <Menu
+                            theme="dark"
+                            defaultSelectedKeys={['menu1']}
+                            mode="inline"
+                            onClick ={this.onClick}
+                        >
                             {this.state.menuData.menu.map((value,index) => {
                                 if(value.subMenu){
                                     return  <SubMenu
