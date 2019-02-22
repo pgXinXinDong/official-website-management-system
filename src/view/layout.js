@@ -25,7 +25,7 @@ export default  class Mian extends React.Component {
         this.setState({collapsed});
     }
     onClick = ({ item, key, selectedKeys }) =>{
-        console.log(1111,item,key,selectedKeys)
+
     }
 
     render() {
