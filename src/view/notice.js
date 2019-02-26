@@ -57,9 +57,13 @@ const columns = [{
 const NoticeTable = () =>{
     return(
         <div>
-            <Table dataSource={dataSource} columns={columns} pagination={
-                total:50
-            }/>
+            <Table dataSource={dataSource} columns={columns} pagination={{
+                total:'50',
+                
+                hideOnSinglePage:true,
+                showQuickJumper:true,
+                showSizeChanger:true
+            }}/>
         </div>
 
     )
