@@ -4,7 +4,9 @@ import {Route, Link} from "react-router-dom"
 import menuData from "../data/menu"
 import UserSel from "./component/userSel"
 import WorkBench from "./workbench"
+import Dynamic from "./component/test"
 import Notice from "./notice"
+
 
 
 const {Header, Content, Footer, Sider,} = Layout;
@@ -18,7 +20,6 @@ export default class Mian extends React.Component {
     state = {
         collapsed: false,
         menuData: menuData
-
     };
 
     onCollapse = (collapsed) => {
@@ -38,7 +39,6 @@ export default class Mian extends React.Component {
                     </div>
                 </Header>
                 <Layout style={{minHeight: '90vh'}}>
-
                     <Sider
                         collapsible
                         collapsed={this.state.collapsed}
@@ -85,6 +85,7 @@ export default class Mian extends React.Component {
                         <Route exact  path="/"      component={WorkBench}/>
                         <Route path="/workbench"    component={WorkBench}/>
                         <Route path="/manage/notice" component={Notice}></Route>
+                        <Route path="/manage/dynamic" component={Dynamic}></Route>
 
 
                         <Footer style={{textAlign: 'center',position:'absolute',width:'100%',bottom:'10px'}}>
