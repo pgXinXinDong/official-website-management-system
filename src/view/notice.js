@@ -39,7 +39,8 @@ const columns = [{
     {
         title: "操作",
         dataIndex: 'operation',
-        render: (text, record) => (
+        render: (text, record) => {
+            return(
             <div>
                 <ModalWork value={record} color="#24aa7d" title="编辑" type="edit"></ModalWork>
                 <Popconfirm title="确定要删除吗?" okText="确定" cancelText="取消">
@@ -48,8 +49,8 @@ const columns = [{
                               twoToneColor="#d81e06"></Icon>
                     </Tooltip>
                 </Popconfirm>
-            </div>
-        ),
+            </div>)
+        },
     }
 ];
 
@@ -58,7 +59,7 @@ const NoticeTable = () => {
         <div>
             <Table dataSource={dataSource} columns={columns}
                    pagination={{
-                       total: '50',
+                       total: 50,
                        hideOnSinglePage: true,
                        showQuickJumper: true,
                        showSizeChanger: true

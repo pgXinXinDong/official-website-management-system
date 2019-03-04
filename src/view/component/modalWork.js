@@ -5,6 +5,7 @@ import FormNotice from "./formNotice"
 export default class ModelWork extends Component{
     constructor(props){
         super(props)
+
     }
     state = {
         visible:false
@@ -44,7 +45,7 @@ export default class ModelWork extends Component{
                     okText="确认"
                     cancelText="取消"
                 >
-                    <FormNotice/>
+                    <FormNotice rowValue={this.props}/>
                 </Modal>
             </Tooltip>
 
