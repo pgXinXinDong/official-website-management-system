@@ -3,7 +3,7 @@ import {
     Form, Icon, Input, Button, DatePicker, Select, Radio
 } from 'antd';
 import locale from 'antd/lib/date-picker/locale/zh_CN';
-
+import moment from "moment"
 const Option = Select.Option;
 const children = [];
 
@@ -30,7 +30,9 @@ class DynamiForm extends Component {
     render() {
         const {getFieldDecorator} = this.props.form;
         const config = {
+            initialValue:moment(`${this.props.rowValue.value.date}`),
             rules: [{type: 'object', required: true, message: 'Please select time!'}],
+
         };
         const formItemLayout = {
             labelCol: {
@@ -42,7 +44,7 @@ class DynamiForm extends Component {
                 sm: { span: 14 },
             },
         };
-        console.log(6666,this.props.rowValue.value.title)
+
 
         return (
             <Form>
@@ -51,6 +53,7 @@ class DynamiForm extends Component {
                     label="标题"
                 >
                     {getFieldDecorator("title", {
+                        initialValue:this.props.rowValue.value.title,
                         rules: [
                             {
                                 required: true,
@@ -61,7 +64,7 @@ class DynamiForm extends Component {
                             }
                         ]
                     })(
-                        <Input defaultValue="2222" allowClear  />
+                        <Input  allowClear  />
                     )}
 
                 </Form.Item>
@@ -71,21 +74,23 @@ class DynamiForm extends Component {
                 >
                     {
                         getFieldDecorator("link", {
+                            initialValue:this.props.rowValue.value.link,
                             rules: [{
                                 required: true,
                                 message: "链接"
-                            }]
+                            }],
                         })(
-                            <Input/>
+                            <Input allowClear/>
                         )
                     }
                 </Form.Item>
                 <Form.Item
                     {...formItemLayout}
                     label="日期"
+
                 >
                     {getFieldDecorator('date-time-picker', config)(
-                        <DatePicker  locale={locale}/>
+                        <DatePicker  locale={locale} allowClear />
                     )}
                 </Form.Item>
                 <Form.Item

@@ -7,14 +7,14 @@ const dataSource = [{
     title: '孙涛勇：“小前台+大中台” 构建未来零售蓝图',
     link: 'javascript:;',
     release: '微盟官网(ID:9)',
-    date: "时间",
+    date: "2019-03-19",
     operation: "操作"
 }, {
     key: '2',
     title: '孙涛勇：“小前台+大中台” 构建未来零售蓝图',
     link: 'javascript:;',
     release: '微盟官网(ID:9)',
-    date: "时间",
+    date: "2019-03-19",
     operation: "操作"
 }];
 

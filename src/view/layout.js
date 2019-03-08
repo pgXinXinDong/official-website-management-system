@@ -6,13 +6,14 @@ import UserSel from "./component/userSel"
 import WorkBench from "./workbench"
 import Dynamic from "./component/test"
 import Notice from "./notice"
-
+import axios  from "axios"
 
 
 const {Header, Content, Footer, Sider,} = Layout;
 const SubMenu = Menu.SubMenu;
 
 export default class Mian extends React.Component {
+
     constructor(props) {
         super(props)
     }
@@ -21,6 +22,19 @@ export default class Mian extends React.Component {
         collapsed: false,
         menuData: menuData
     };
+
+    componentWillMount(){
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:8080/api/getMenuData",
+            data:{
+                code:0,
+                msg:{}
+            }
+        }).then(function(response){
+            console.log(111,response)
+        })
+    }
 
     onCollapse = (collapsed) => {
         this.setState({collapsed});

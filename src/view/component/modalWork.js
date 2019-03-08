@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import {Modal,Tooltip,Icon} from "antd"
 import FormNotice from "./formNotice"
+import axios from "axios/index";
 
 export default class ModelWork extends Component{
     constructor(props){
@@ -15,6 +16,7 @@ export default class ModelWork extends Component{
         this.setState({
             visible:true
         })
+       this.postData()
    }
 
    handleCancel = (e) =>{
@@ -28,6 +30,19 @@ export default class ModelWork extends Component{
             visible:false
         })
    }
+   postData = ()=>{
+        axios({
+            method:'post',
+            url:'http://127.0.0.1:8080/',
+            data: {
+                firstName: 'Fred',
+                lastName: 'Flintstone'
+            }
+        })
+            .then(function(response) {
+                console.log(response)
+            });
+    }
 
     render(){
         return(
